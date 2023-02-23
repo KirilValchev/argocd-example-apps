@@ -1,7 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: safari-pvc
+  name: safari-pvc-dp
   namespace: project-tiger
 spec:
   accessModes:
