@@ -31,9 +31,9 @@ spec:
   - metadata:
       name: safari-pvcl
       spec:
-      accessModes:
+        accessModes:
           - ReadWriteOnce
-      resources:
+        resources:
           requests:
           storage: 1Gi
-      storageClassName: default
+        storageClassName: default
