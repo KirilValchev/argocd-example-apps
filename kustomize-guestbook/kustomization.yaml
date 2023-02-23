@@ -1,11 +1,10 @@
 namePrefix: kustomize-
+buildMetadata: [managedByLabel, originAnnotations, transformerAnnotations]
 namespace: alabala
 labels:
   - pairs:
       app.kubernetes.io/instance: alabala
-      owner: alice
-      app: bingo
-    includeSelectors: true # <-- false by default
+    includeSelectors: false # <-- false by default
     includeTemplates: true # <-- false by default
 configMapGenerator:
   - name: guestbook-cm
