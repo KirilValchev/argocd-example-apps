@@ -27,6 +27,8 @@ spec:
   volumeClaimTemplates:
   - metadata:
       name: safari-pvcl
+      labels:
+        app.kubernetes.io/instance: alabala
     spec:
       accessModes:
         - ReadWriteOnce
