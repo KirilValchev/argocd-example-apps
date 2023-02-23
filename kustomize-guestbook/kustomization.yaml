@@ -6,7 +6,7 @@ labels:
       owner: alice
       app: bingo
     includeSelectors: false # <-- false by default
-    includeTemplates: false # <-- false by default
+    includeTemplates: true # <-- false by default
 configMapGenerator:
 - name: guestbook-cm
   files:
