@@ -18,6 +18,6 @@ resources:
   - safari-sf.yml
   - safari-dp.yml
   - safari-pvc-dp.yml
-  - safari-pv-dp.yml
+  #- safari-pv-dp.yml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
