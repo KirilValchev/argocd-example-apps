@@ -5,7 +5,6 @@ metadata:
   labels:
     app: safari
   name: safari
-  namespace: project-tiger
 spec:
   replicas: 1
   selector:
@@ -34,5 +33,5 @@ spec:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 1Gi
+            storage: 3Gi
         storageClassName: "default"
