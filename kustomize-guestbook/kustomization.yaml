@@ -5,7 +5,7 @@ labels:
       app.kubernetes.io/instance: alabala
       owner: alice
       app: bingo
-    includeSelectors: false # <-- false by default
+    includeSelectors: true # <-- false by default
     includeTemplates: true # <-- false by default
 configMapGenerator:
   - name: guestbook-cm
