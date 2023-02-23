@@ -1,9 +1,13 @@
 namePrefix: kustomize-
 buildMetadata: [managedByLabel, originAnnotations, transformerAnnotations]
 namespace: alabala
+commonAnnotations:
+  argocd.argoproj.io/tracking-id: YWxhYmFsYQ==
 labels:
   - pairs:
-      app.kubernetes.io/instance: alabala
+      app.kubernetes.io/name: guestbook
+      app.kubernetes.io/instance: guestbook
+      app.kubernetes.io/part-of: kustomize-guestbook
     includeSelectors: false # <-- false by default
     includeTemplates: true # <-- false by default
 configMapGenerator:
@@ -17,6 +21,10 @@ resources:
   - safari-sf.yml
   - safari-dp.yml
   - safari-pvc-dp.yml
-  #- safari-pv-dp.yml
+  - safari-pvc-st.yml
+  - safari-ing.yml
+  - safari-svc.yml
+  - default-limit-range.yml
+  - default-pod-quota.yml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization

@@ -4,6 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     app: safari
+    app.kubernetes.io/name: safari
+    app.kubernetes.io/instance: safari
   name: safari
 spec:
   replicas: 1
@@ -17,13 +19,13 @@ spec:
       labels:
         app: safari
     spec:
-      volumes: # add
-        - name: data # add
-          persistentVolumeClaim: # add
-            claimName: safari-pvc-dp # add
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: safari-pvc-dp
       containers:
         - image: httpd:2.4.41-alpine
           name: container
-          volumeMounts: # add
-            - name: data # add
-              mountPath: /tmp/safari-data # add
+          volumeMounts: 
+            - name: data
+              mountPath: /tmp/safari-data
