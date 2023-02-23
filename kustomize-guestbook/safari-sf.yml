@@ -19,20 +19,20 @@ spec:
         app: safari
     spec:
       containers:
-      - image: httpd:2.4.41-alpine
-        name: container
-        volumeMounts:
-        - name: safari-pvcl
-          mountPath: /tmp/safari-data
+        - image: httpd:2.4.41-alpine
+          name: container
+          volumeMounts:
+            - name: safari-pvcl
+              mountPath: /tmp/safari-data
   volumeClaimTemplates:
-  - metadata:
-      name: safari-pvcl
-      labels:
-        app.kubernetes.io/instance: alabala
-    spec:
-      accessModes:
-        - ReadWriteOnce
-      resources:
-        requests:
-          storage: 1Gi
-      storageClassName: "default"
+    - metadata:
+        name: safari-pvcl
+        labels:
+          app.kubernetes.io/instance: alabala
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+        storageClassName: "default"

@@ -1,9 +1,9 @@
 kind: PersistentVolume
 apiVersion: v1
 metadata:
- name: safari-pv-dp
+  name: safari-pv-dp
 spec:
- capacity:
-  storage: 2Gi
- accessModes:
-  - ReadWriteOnce
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
