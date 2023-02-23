@@ -12,14 +12,12 @@ spec:
   selector:
     matchLabels:
       app: safari-dp
-      app.kubernetes.io/name: safari-dp
-      app.kubernetes.io/instance: safari-dp
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: safari
+        app: safari-dp
     spec:
       volumes:
         - name: data
