@@ -1,4 +1,11 @@
 namePrefix: kustomize-
+labels:
+  - pairs:
+      app.kubernetes.io/instance: alabala
+      owner: alice
+      app: bingo
+    includeSelectors: false # <-- false by default
+    includeTemplates: false # <-- false by default
 configMapGenerator:
 - name: guestbook-cm
   files:
