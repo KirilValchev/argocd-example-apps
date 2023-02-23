@@ -28,13 +28,13 @@ spec:
         volumeMounts:                               # add
         - name: data                                # add
           mountPath: /tmp/safari-data               # add
-    volumeClaimTemplates:
-    - metadata:
-        name: safari-pvcl
-        spec:
-        accessModes:
-            - ReadWriteOnce
-        resources:
-            requests:
-            storage: 1Gi
-        storageClassName: default
+  volumeClaimTemplates:
+  - metadata:
+      name: safari-pvcl
+      spec:
+      accessModes:
+          - ReadWriteOnce
+      resources:
+          requests:
+          storage: 1Gi
+      storageClassName: default
