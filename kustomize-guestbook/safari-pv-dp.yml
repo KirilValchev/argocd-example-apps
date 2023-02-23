@@ -8,3 +8,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   volumeMode: Filesystem
+  storageClassName: default
