@@ -6,15 +6,18 @@ labels:
       owner: alice
       app: bingo
     includeSelectors: false # <-- false by default
-    includeTemplates: false # <-- false by default
+    includeTemplates: true # <-- false by default
 configMapGenerator:
-- name: guestbook-cm
-  files:
-  - index2.html
+  - name: guestbook-cm
+    files:
+      - index2.html
 resources:
-- guestbook-ui-deployment.yaml
-- guestbook-ui-svc.yaml
-- guestbook-ui-ing.yaml
-#- safari-sf.yml
+  - guestbook-ui-deployment.yaml
+  - guestbook-ui-svc.yaml
+  - guestbook-ui-ing.yaml
+  - safari-sf.yml
+  - safari-dp.yml
+  - safari-pvc-dp.yml
+  - safari-pv-dp.yml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
