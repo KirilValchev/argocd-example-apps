@@ -4,7 +4,7 @@ metadata:
   labels:
     app.kubernetes.io/name: safari
     app.kubernetes.io/instance: safari
-  name: safari-pvc-dp
+  name: safari-pvc-st
 spec:
   accessModes:
     - ReadWriteOnce

@@ -4,7 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     app: safari
-    version: v2
+    app.kubernetes.io/name: safari
+    app.kubernetes.io/instance: safari
   name: safari
 spec:
   replicas: 1
@@ -22,17 +23,9 @@ spec:
         - image: httpd:2.4.41-alpine
           name: container
           volumeMounts:
-            - name: safari-pvcl
+            - name: data
               mountPath: /tmp/safari-data
-  volumeClaimTemplates:
-    - metadata:
-        name: safari-pvcl
-        labels:
-          app.kubernetes.io/instance: alabala
-      spec:
-        accessModes:
-          - ReadWriteOnce
-        resources:
-          requests:
-            storage: 2Gi
-        storageClassName: "default"
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: safari-pvc-st

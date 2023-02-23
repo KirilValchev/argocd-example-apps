@@ -10,7 +10,5 @@ data:
     </html>
 kind: ConfigMap
 metadata:
-  labels:
-    app.kubernetes.io/instance: kustomize-guestbook
   name: guestbook-cm
   namespace: alabala
