@@ -5,7 +5,6 @@ metadata:
   labels:
     app: safari
   name: safari
-  namespace: project-tiger
 spec:
   replicas: 1
   selector:
