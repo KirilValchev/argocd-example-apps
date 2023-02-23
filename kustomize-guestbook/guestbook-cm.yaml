@@ -11,4 +11,7 @@ data:
 kind: ConfigMap
 metadata:
   name: guestbook-cm
+  labels:
+      app.kubernetes.io/name: guestbook
+      app.kubernetes.io/instance: guestbook
   namespace: alabala

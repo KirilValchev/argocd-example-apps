@@ -2,7 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app.kubernetes.io/instance: kustomize-guestbook
+      app.kubernetes.io/name: guestbook
+      app.kubernetes.io/instance: guestbook
   name: guestbook-ui
 spec:
   replicas: 1
