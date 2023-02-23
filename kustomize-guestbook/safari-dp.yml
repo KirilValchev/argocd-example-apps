@@ -6,7 +6,7 @@ metadata:
     app: safari-dp
     app.kubernetes.io/name: safari-dp
     app.kubernetes.io/instance: safari-dp
-  name: safari
+  name: safari-dp
 spec:
   replicas: 1
   selector:
