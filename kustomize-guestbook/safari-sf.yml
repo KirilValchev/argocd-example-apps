@@ -3,22 +3,22 @@ kind: StatefulSet
 metadata:
   creationTimestamp: null
   labels:
-    app: safari
-    app.kubernetes.io/name: safari
-    app.kubernetes.io/instance: safari
+    app: safari-st
+    app.kubernetes.io/name: safari-sf
+    app.kubernetes.io/instance: safari-sf
     resize: v1
-  name: safari
+  name: safari-st
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: safari
+      app: safari-st
   serviceName: "safari-svc"
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: safari
+        app: safari-st
     spec:
       containers:
         - image: httpd:2.4.41-alpine
