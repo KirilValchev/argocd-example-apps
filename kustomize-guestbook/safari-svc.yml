@@ -2,12 +2,26 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app.kubernetes.io/name: safari
-    app.kubernetes.io/instance: safari
-  name: safari-svc
+    app.kubernetes.io/name: safari-svc-dp
+    app.kubernetes.io/instance: safari-svc-dp
+  name: safari-svc-dp
 spec:
   ports:
     - port: 80
       targetPort: 80
   selector:
-    app: safari
+    app: safari-dp
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/name: safari-svc-st
+    app.kubernetes.io/instance: safari-svc-st
+  name: safari-svc-st
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: safari-st
