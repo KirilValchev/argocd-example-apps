@@ -4,8 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     app: safari-dp
-    app.kubernetes.io/name: safari
-    app.kubernetes.io/instance: safari
+    app.kubernetes.io/name: safari-dp
+    app.kubernetes.io/instance: safari-dp
   name: safari
 spec:
   replicas: 1
