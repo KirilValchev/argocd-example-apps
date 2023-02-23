@@ -11,6 +11,7 @@ spec:
   selector:
     matchLabels:
       app: safari
+  serviceName: "safari-svc"
   template:
     metadata:
       creationTimestamp: null
