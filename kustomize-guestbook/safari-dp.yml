@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: safari
+    app: safari-dp
     app.kubernetes.io/name: safari
     app.kubernetes.io/instance: safari
   name: safari
@@ -11,7 +11,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: safari
+      app: safari-dp
   strategy: {}
   template:
     metadata:
