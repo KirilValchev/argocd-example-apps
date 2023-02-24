@@ -4,10 +4,16 @@ metadata:
   labels:
     app.kubernetes.io/name: safari
     app.kubernetes.io/instance: safari
+    resize: v1
   name: safari-pvc-dp
 spec:
   accessModes:
     - ReadWriteMany
   resources:
     requests:
+<<<<<<< Updated upstream
       storage: 1Gi
+=======
+      storage: 2Gi
+  storageClassName: azurefile
+>>>>>>> Stashed changes
