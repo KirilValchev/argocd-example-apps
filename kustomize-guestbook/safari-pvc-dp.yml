@@ -4,7 +4,7 @@ metadata:
   labels:
     app.kubernetes.io/name: safari
     app.kubernetes.io/instance: safari
-    resize: v1
+    resize: v2
   name: safari-pvc-dp
 spec:
   accessModes:
