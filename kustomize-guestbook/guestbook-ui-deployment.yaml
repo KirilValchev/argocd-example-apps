@@ -2,8 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-      app.kubernetes.io/name: guestbook
-      app.kubernetes.io/instance: guestbook
+    app.kubernetes.io/name: guestbook
+    app.kubernetes.io/instance: guestbook
   name: guestbook-ui
 spec:
   replicas: 1
@@ -17,17 +17,17 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
-        name: guestbook-ui
-        ports:
-        - containerPort: 80
-        volumeMounts:
-        - name: config-volume
-          mountPath: /var/www/html/
+        - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+          name: guestbook-ui
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: config-volume
+              mountPath: /var/www/html/
       volumes:
-      - name: config-volume
-        configMap:
-         name: kustomize-guestbook-cm
-         items:
-         - key: index2.html
-           path: index2.html
+        - name: config-volume
+          configMap:
+            name: kustomize-guestbook-cm
+            items:
+              - key: index2.html
+                path: index2.html

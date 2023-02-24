@@ -6,6 +6,7 @@ metadata:
     app: safari-dp
     app.kubernetes.io/name: safari-dp
     app.kubernetes.io/instance: safari-dp
+    resize: v1
   name: safari-dp
 spec:
   replicas: 1
@@ -19,13 +20,13 @@ spec:
       labels:
         app: safari-dp
     spec:
-      volumes:
-        - name: data
-          persistentVolumeClaim:
-            claimName: safari-pvc-dp
       containers:
         - image: httpd:2.4.41-alpine
           name: container
           volumeMounts: 
             - name: data
               mountPath: /tmp/safari-data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: safari-pvc-dp
